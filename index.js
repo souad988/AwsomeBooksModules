@@ -1,6 +1,7 @@
 import BookCollection from './modules/bookCollection.js';
 import { storageAvailable, populateStorage, setInputs } from './modules/localStorage.js';
-import {displayCurrentDate} from './modules/currentDate.js';
+import displayCurrentDate from './modules/currentDate.js';
+
 const bookCollection = new BookCollection();
 
 const addBookButton = document.querySelector('#add-book');
@@ -16,20 +17,12 @@ const currentDate = document.querySelector('#date');
 displayCurrentDate(currentDate);
 
 if (storageAvailable('localStorage')) {
-    if (!localStorage.getItem('books')) {
-      populateStorage(bookCollection);
-    } else {
-      setInputs(bookCollection);
-    }
-  }
-  
-  if (document.readyState !== 'loading') {
-    displayBooks();
+  if (!localStorage.getItem('books')) {
+    populateStorage(bookCollection);
   } else {
-    document.addEventListener('DOMContentLoaded', () => {
-      displayBooks();
-    });
+    setInputs(bookCollection);
   }
+}
 
 /* eventlistners */
 
@@ -59,6 +52,13 @@ function displayBooks() {
     });
   }
 
+  if (document.readyState !== 'loading') {
+    displayBooks();
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      displayBooks();
+    });
+  }
   const removeButtons = document.querySelectorAll('.remove');
 
   removeButtons.forEach((rb) => rb.addEventListener('click', () => {
@@ -91,5 +91,3 @@ navLinks.forEach((link) => link.addEventListener('click', (e) => {
   selectedSection.classList.remove('hide');
   selectedSection.classList.add('show');
 }));
-
-
