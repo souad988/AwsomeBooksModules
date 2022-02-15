@@ -1,4 +1,4 @@
-import DateTime from '../node_modules/luxon/src/datetime.js';
+import {DateTime} from '../node_modules/luxon/build/es6/luxon.js';
 
 export default function displayCurrentDate(dateContainer) {
   setInterval(() => {
