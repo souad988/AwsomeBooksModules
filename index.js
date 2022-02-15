@@ -51,6 +51,16 @@ function displayBooks() {
                                       </li>`;
     });
   }
+  /*
+  const removeButtons = document.querySelectorAll('.remove');
+  console.log(removeButtons); 
+
+  removeButtons.forEach((rb) => rb.addEventListener('click', () => {
+    bookCollection.remove(rb.id);
+    populateStorage(bookCollection);
+    displayBooks();
+    console.log('removed');
+  }));*/
 }
 /*
   if (document.readyState !== 'loading') {
@@ -69,16 +79,19 @@ window.addEventListener('load', () => {
     displayBooks();
   });
 */
-  const removeButtons = document.querySelectorAll('.remove');
-  console.log(removeButtons); 
 
-  removeButtons.forEach((rb) => rb.addEventListener('click', () => {
-    bookCollection.remove(rb.id);
-    populateStorage(bookCollection);
-    displayBooks();
-    console.log('removed');
-  }));
-setTimeout(()=>console.log(removeButtons),8000);
+//const removeButtons = document.querySelectorAll('.remove');
+mainSection.addEventListener('click', (e) => {
+  if (e.target.classList.contains('remove')) {
+    const num = e.target.id;
+      bookCollection.remove(num);
+      populateStorage(bookCollection);
+      displayBooks();
+    }
+  })
+
+
+//setTimeout(()=>console.log(removeButtons),8000);
 
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
