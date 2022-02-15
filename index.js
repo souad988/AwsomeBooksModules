@@ -30,7 +30,6 @@ function displayBooks() {
   if (document.querySelector('.books')) {
     mainSection.removeChild(document.querySelector('.books'));
   }
-  //console.log('books length::',bookCollection.books.length);
   if (bookCollection.books.length === 0) {
     empty.innerHTML = 'Book list is empty!!';
   } else {
@@ -51,47 +50,21 @@ function displayBooks() {
                                       </li>`;
     });
   }
-  /*
-  const removeButtons = document.querySelectorAll('.remove');
-  console.log(removeButtons); 
-
-  removeButtons.forEach((rb) => rb.addEventListener('click', () => {
-    bookCollection.remove(rb.id);
-    populateStorage(bookCollection);
-    displayBooks();
-    console.log('removed');
-  }));*/
 }
-/*
-  if (document.readyState !== 'loading') {
-    console.log('loading');  
-    displayBooks();
-  } else {
-    
-  }*/
+
 displayBooks();
 document.addEventListener('DOMContentLoaded', () => {
-      console.log('entred');
-      
-    });
-    /*
-window.addEventListener('load', () => {
-    displayBooks();
-  });
-*/
+  console.log('entred');
+});
 
-//const removeButtons = document.querySelectorAll('.remove');
 mainSection.addEventListener('click', (e) => {
   if (e.target.classList.contains('remove')) {
     const num = e.target.id;
-      bookCollection.remove(num);
-      populateStorage(bookCollection);
-      displayBooks();
-    }
-  })
-
-
-//setTimeout(()=>console.log(removeButtons),8000);
+    bookCollection.remove(num);
+    populateStorage(bookCollection);
+    displayBooks();
+  }
+});
 
 bookForm.addEventListener('submit', (e) => {
   e.preventDefault();
