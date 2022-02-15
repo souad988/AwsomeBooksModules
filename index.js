@@ -54,7 +54,6 @@ function displayBooks() {
 
 displayBooks();
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('entred');
 });
 
 mainSection.addEventListener('click', (e) => {
@@ -80,7 +79,6 @@ addBookButton.addEventListener('click', () => {
 
 navLinks.forEach((link) => link.addEventListener('click', (e) => {
   e.preventDefault();
-  console.log('link clicked', link);
   content.forEach((item) => {
     item.classList.remove('show');
     item.classList.add('hide');
