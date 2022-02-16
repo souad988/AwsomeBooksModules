@@ -26,7 +26,7 @@ if (storageAvailable('localStorage')) {
 
 /* eventlistners */
 
-const displayBooks=() =>{
+const displayBooks = () => {
   if (document.querySelector('.books')) {
     mainSection.removeChild(document.querySelector('.books'));
   }
@@ -50,7 +50,7 @@ const displayBooks=() =>{
                                       </li>`;
     });
   }
-}
+};
 
 displayBooks();
 document.addEventListener('DOMContentLoaded', () => {

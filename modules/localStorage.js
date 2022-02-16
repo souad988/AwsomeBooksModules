@@ -1,14 +1,14 @@
-const setInputs=(bookCollection)=> {
+const setInputs = (bookCollection) => {
   const booksArr = JSON.parse(localStorage.getItem('books'));
   bookCollection.setBooks(booksArr);
-}
+};
 
-const populateStorage=(bookCollection)=> {
+const populateStorage = (bookCollection) => {
   localStorage.setItem('books', JSON.stringify(bookCollection.getBooks()));
   setInputs(bookCollection);
-}
+};
 
-const storageAvailable=(type) =>{
+const storageAvailable = (type) => {
   let storage;
   try {
     storage = window[type];
@@ -30,6 +30,6 @@ const storageAvailable=(type) =>{
               // acknowledge QuotaExceededError only if there's something already stored
               && (storage && storage.length !== 0);
   }
-}
+};
 
 export { storageAvailable, populateStorage, setInputs };
