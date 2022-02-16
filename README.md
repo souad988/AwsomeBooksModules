@@ -8,25 +8,22 @@ Javascript App that keeps track of awesome books
 
 ## Getting Started
 
-**Download the files into you repo and you will be good to go.**
+**To get a local copy up and running follow these simple example steps.**
 
-To get a local copy up and running follow these simple example steps.
+Clone the repo with `git clone git@github.com:souad988/AwsomeBooksModules.git`
 
-### Prerequisites
+Run `npm install` from the command line
 
-### Setup
+Run `npx hint .` to test for HTML linting check
 
-\*\*Download the files into you repo and you will be good to go.
+Run `npx stylelint "**/*.{css,scss}"` to test for css/scss linting check
 
-### Install
+Run `npx eslint .` to test for javascript linting check
 
-### Usage
+The app is deployed using Github Pages. You can view it by clicking the [Live Demo Link](#Live-Demo) below.
+### Live demo
 
-### Run tests
-
-### Deployment
-
-[gitpages]()
+[gitpages](https://souad988.github.io/AwsomeBooksModules/)
 
 ## Authors
 
@@ -43,15 +40,13 @@ Screenshot:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the (https://github.com/mnekx/awesome-books/issues/).
+Feel free to check the (https://github.com/souad988/AwsomeBooksModules/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-- Souad
 - Microverse
 
 ## 📝 License
