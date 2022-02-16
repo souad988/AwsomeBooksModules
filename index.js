@@ -26,7 +26,7 @@ if (storageAvailable('localStorage')) {
 
 /* eventlistners */
 
-function displayBooks() {
+const displayBooks=() =>{
   if (document.querySelector('.books')) {
     mainSection.removeChild(document.querySelector('.books'));
   }

@@ -1,14 +1,14 @@
-function setInputs(bookCollection) {
+const setInputs=(bookCollection)=> {
   const booksArr = JSON.parse(localStorage.getItem('books'));
   bookCollection.setBooks(booksArr);
 }
 
-function populateStorage(bookCollection) {
+const populateStorage=(bookCollection)=> {
   localStorage.setItem('books', JSON.stringify(bookCollection.getBooks()));
   setInputs(bookCollection);
 }
 
-function storageAvailable(type) {
+const storageAvailable=(type) =>{
   let storage;
   try {
     storage = window[type];
