@@ -1,6 +1,10 @@
 # AwsomeBooksModules
 
-Javascript App that keeps track of awesome books
+this project is a web app where users can add there books and have access to the list since it is stored using browsers localstorage, this project is built using html/css and javascript.
+
+## Screenshot
+
+![see](./images/screenshot.png?raw=true "Title")
 
 ## Built With
 
@@ -32,9 +36,7 @@ The app is deployed using Github Pages. You can view it by clicking the [Live De
 - GitHub: [@githubhandle](https://github.com/souad988)
   https://github.com/souad988
 
-## Screenshot ![see](./images/screenshot.png?raw=true "Title")
 
-Screenshot:
 
 ## 🤝 Contributing
 
